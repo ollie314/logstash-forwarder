@@ -1,5 +1,16 @@
 # logstash-forwarder
 
+# THIS PROJECT IS REPLACED BY [FILEBEAT](https://github.com/elastic/beats/tree/master/filebeat)
+
+The [filebeat](https://github.com/elastic/beats/tree/master/filebeat) project replaces logstash-forwarder. Please use that instead.
+
+No further development will occur on this project. Major bug fixes or security fixes may be worked on through 2016, at which point this repository and its project will be abandoned. The replacement is [filebeat](https://github.com/elastic/beats/tree/master/filebeat) which receives new features and fixes frequently. :)
+
+Happy logging!
+
+
+---
+
 ♫ I'm a lumberjack and I'm ok! I sleep when idle, then I ship logs all day! I parse your logs, I eat the JVM agent for lunch! ♫
 
 (This project was recently renamed from 'lumberjack' to 'logstash-forwarder' to
@@ -93,6 +104,8 @@ the only thing on the line:
         }
       ]
     }
+
+Any part of config can use environment variables as `$VAR` or `${VAR}`. They will be evaluated before processing JSON, allowing to pass any structure.
 
 You can also read an entire directory of JSON configs by specifying a directory instead of a file with the `-config` option.
 
